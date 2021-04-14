@@ -7,3 +7,15 @@ for x in numbers:
 # range
 for x in range(1,11):
     print(x)
+
+
+print('-' * 20)
+counter = 0
+
+while counter < 3:
+    print(counter)
+    counter += 1
+
+# 1: 0 < 3
+# 2: 1 < 3
+# 3: 2 < 3 
