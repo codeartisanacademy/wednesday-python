@@ -1,4 +1,4 @@
-class Student():
+class Student:
 
     # constructor
     def __init__(self, name, birthday, faculty):
