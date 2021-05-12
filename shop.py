@@ -20,9 +20,13 @@ class Shop:
             print("The shop has not products yet.")
     
     def get_product(self, id):
-        # homework
-        pass
-
+        if len(self.products) > 0:
+            for p in self.products:
+                if p.id == id:
+                    return p
+            return "Product can't be found"
+        
+        return "Shop has no products"
 
 class Product:
 
@@ -34,8 +38,9 @@ class Product:
         self.description = description
     
     def discounted_price(self, discount):
-        # homework
-        pass
+        discount_amount = self.price * (discount/100)
+        final_price = self.price - discount_amount
+        return final_price
 
 abc_shop = Shop(name="Toko ABC", owner="John Doe", address='Jalan Raya no 3', products=[])
 
@@ -53,3 +58,7 @@ abc_shop.add_product(vintage_gameboy)
 
 print(abc_shop.products)
 print(abc_shop.get_all_products())
+
+print(playstation_4.discounted_price(10))
+product = abc_shop.get_product(2)
+print(product.title)
